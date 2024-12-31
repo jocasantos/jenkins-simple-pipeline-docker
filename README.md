@@ -116,3 +116,17 @@ docker run hello-world
 
 1. Create your `Jenkinsfile`, copy the data from this repo.
 
+2. Create a Jenkins pipeline:
+    - Go to Dashboard > New item > Pipeline (enter a name for your pipeline)
+    - Go to Pipeline tab > select "Pipeline script from SCM"
+    - On SCM select "Git" > paste your repo URL > change the master branch for main (You have to see what is in your case) > on "Script Path" put the Jenkinsfile path (my is default)
+    > Credentials only needed when repo is private
+    - Save
+
+3. Run your pipeline:
+    - Press "Build Now" on your left panel
+    - It will appear a loading bar for your job > check the "Console Output" if you want to see the steps 
+    - Jenkings automatically will remove the docker container in the end
+
+> Congratulations! You built a basic pipeline with Jenkins and a Docker agent. :tada::tada:
+
