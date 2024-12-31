@@ -76,3 +76,34 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 5. Create First Admin User
 
 6. Jenkins Installation is Successful. You can now starting using the Jenkins 🎉
+
+### Install the Docker Pipeline plugin in Jenkins:
+
+ - Log in to Jenkins.
+ - Go to Manage Jenkins > Manage Plugins.
+ - In the Available tab, search for "Docker Pipeline".
+ - Select the plugin and click the Install button.
+ - Restart Jenkins after the plugin is installed.
+
+### Docker Slave Configuration
+
+1. Run the below command to Install Docker
+```bash
+sudo apt update
+sudo apt install docker.io
+```
+
+2. Grant Jenkins user and Ubuntu user permission to docker deamon.
+```bash
+sudo su - 
+usermod -aG docker jenkins
+usermod -aG docker ubuntu
+systemctl restart docker
+```
+
+3. Restart Jenkins (on your browser)
+```bash
+http://<ec2-instance-public-ip>:8080/restart
+```
+
+> The docker agent configuration is now successful! :tada: 
