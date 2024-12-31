@@ -105,5 +105,14 @@ systemctl restart docker
 ```bash
 http://<ec2-instance-public-ip>:8080/restart
 ```
-
 > The docker agent configuration is now successful! :tada: 
+
+4. Test Docker Run
+```bash
+docker run hello-world
+```
+
+### Test Jenkins job that uses Docker agent
+
+1. Create your `Jenkinsfile`, copy the data from this repo.
+
