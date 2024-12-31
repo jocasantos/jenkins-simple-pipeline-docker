@@ -5,22 +5,22 @@
 1. Create a EC2 instance and connect to it using SSH.
 > Already explain this part in another guide of mine. https://github.com/jocasantos/aws-nodejs-app-demo
 
-    - For better practices you should store your `<name>.pem` file in your `~/.ssh` folder
-    - Then create a config file 
-        ```bash
-        vim config
-        ```
-    - Edit the file
-        ```bash
-        Host jenkins
-          Hostname instance-Public-IPv4-address
-          User ubuntu
-          IdentityFile ~/.ssh/<name>.pem
-        ```
-    - Connect by SSH
-        ```bash
-        ssh jenkins
-        ```
+- For better practices you should store your `<name>.pem` file in your `~/.ssh` folder
+- Then create a config file 
+    ```bash
+    vim config
+    ```
+- Edit the file
+    ```bash
+    Host jenkins
+        Hostname instance-Public-IPv4-address
+        User ubuntu
+        IdentityFile ~/.ssh/<name>.pem
+    ```
+- Connect by SSH
+    ```bash
+    ssh jenkins
+    ```
 
 ### Install Java
 
